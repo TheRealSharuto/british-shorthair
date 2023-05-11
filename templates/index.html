@@ -1,0 +1,58 @@
+<!-- The following is from the base.html, which ensures the navbar will be on each page without duplicate code -->
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+<main class="container p-5">
+    <div class="container">
+        <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+            <div class="col-md-6 p-lg-5 mx-auto my-5">
+                <h1 class="display-1 fw-normal">All About British Shorthairs</h1>
+                <p class="lead fw-normal">
+                    Learn everything you need to know about British Shorthairs right here!
+                </p>
+                <!-- EXTERNAL LINK -->
+                <a class="btn btn-outline-secondary" href="https://www.adoptapet.com/s/adopt-a-british-shorthair"
+                    target="_blank">Adopt a cat
+                    now!</a>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <img src="static/Moka-Rond3.webp" class="img-fluid" id="circle-cat" alt="A pretty silver british shorthair">
+        </div>
+    </div>
+    <div class="px-4 py-5 my-5">
+        <h2 class="display-2 fw-bold">Aren't they the cutest?</h2>
+        <div class="col-lg-6 mx-auto"></div>
+        <p class="lead mb-4">
+            British shorthairs are the cutest cats alive. This website will provide you everything you need to know
+            about British shorthairs before you go and adopt them! Ignore those that try to convince you these cats are
+            ugly... they have no souls.
+        </p>
+    </div>
+    <div class="container"></div>
+</main>
+<section>
+    <div class="container">
+        <h3 class="display-3 section-3">But what makes them so cute?</h3>
+
+        <p>
+            <!-- UNORDERED LIST -->
+        <ul>
+            <li>
+                Chipmunk Cheeks
+            </li>
+            <li>Short Nose</li>
+            <li>Short but thick neck</li>
+            <li>Wide head and rounded face</li>
+            <li>Wide jowls</li>
+            <li>Broad and rounded ears</li>
+            <li>Happy or sour expression</li>
+        </ul>
+        </p>
+    </div>
+</section>
+{% endblock %}

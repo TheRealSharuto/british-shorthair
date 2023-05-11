@@ -1,0 +1,100 @@
+/* Import Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&family=Open+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+
+/* Set font sizes and headings */
+html * {
+    font-size: 21px;
+}
+
+/* set fonts for heading tags, paragraphs and lists */
+h1 {
+    font-family: 'Bitter', serif;
+    font-weight: bold
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Bitter', serif;
+    font-weight: medium;
+}
+
+a {
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: underline;
+}
+
+.form-label {
+    font-family: 'Bitter', serif;
+}
+
+p,
+li,
+button.btn-secondary {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: lighter;
+}
+
+.navbar-brand {
+    font-family: 'Bitter', serif;
+}
+
+#date-text {
+    color: #957DAD;
+    display: block;
+    position: relative;
+}
+
+/* move the circular pic on the front page to inbetween the sections */
+#circle-cat {
+    display: block;
+    position: relative;
+    float: right;
+    bottom: 10rem;
+    object-fit: contain;
+}
+
+.section-3 {
+    display: block;
+}
+
+.small-img {
+    max-width: 25px;
+}
+
+.table-pic {
+    width: 100px;
+    height: auto;
+}
+
+/* I make sure that the password is displayed as none first so the empty error message is not shown before the user submits a form. */
+#password_errors {
+    display: none;
+}
+
+#confirmation {
+    visibility: hidden;
+}
+
+#success {
+    visibility: hidden;
+}
+
+#login_errors {
+    display: none;
+}
+
+.account {
+    color: #957DAD;
+}
+
+/* Account Page */
+
+.gradient-custom {
+    /* older browsers */
+    background: #f6d365;
+    background: -webkit-linear-gradient(to right bottom, rgba(246, 211, 101, 1), rgba(253, 160, 133, 1));
+    background: linear-gradient(to right bottom, rgba(246, 211, 101, 1), rgba(253, 160, 133, 1))
+}

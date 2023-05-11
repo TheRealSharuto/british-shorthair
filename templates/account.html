@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+
+<section class="vh-100">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col col-lg-6 mb-4 mb-lg-0">
+                <div class="card mb-3" style="border-radius: .5rem;">
+                    <div class="row g-0">
+                        <div class="col-md-4 gradient-custom text-center text-white"
+                            style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem;">
+                            <img src="static/trendy_kitty_hip_avatar_animal_cool_sunglasses_cat_by_sytacdesign_dfsrybg-fullview.png"
+                                alt="Avatar" class="img-fluid my-5" style="width: 80px;" />
+                            <h5>{{username}}</h5>
+                            <p>Certified Cat Lover</p>
+                            <i class="far fa-edit mb-5"></i>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body p-4">
+                                <h6>Account Details</h6>
+                                <hr class="mt-0 mb-4">
+                                <div class="row pt-1">
+                                    <div class="col-6 mb-3">
+                                        <h6>Email</h6>
+                                        <p class="text-muted">email@email.com [add functionality later]</p>
+                                    </div>
+                                    <div class="col-6 mb-3">
+                                        <h6>Phone</h6>
+                                        <p class="text-muted">123 456 789</p>
+                                    </div>
+                                </div>
+                                <h6>Security | Reset Password</h6>
+                                <hr class="mt-0 mb-4">
+                                <!-- Error Alert -->
+                                <div class="alert alert-danger" id="password_errors" role="alert"
+                                    style="display: {{ display }}">
+                                    <p>{{ error }}</p>
+                                </div>
+                                <!-- Error Alert -->
+                                {% if flash_messages %}
+                                <div class="alert alert-danger" role="alert">
+                                    {% for message in flash_messages %}
+                                    {{ message }}<br>
+                                    {% endfor %}
+                                </div>
+                                {% endif %}
+                                <form method="post">
+                                    <div class="row pt-1">
+                                        <div class="col-6 mb-3">
+                                            <label for="current_password" class="form-label">
+                                                <h6>Current Password</h6>
+                                            </label>
+                                            <input type="password" name="current_password"
+                                                class="form-control form-control-lg" required>
+                                        </div>
+                                        <div class="col-6 mb-3">
+                                            <label for="new_password" class="form-label">
+                                                <h6>New Password</h6>
+                                            </label>
+                                            <input type="password" name="new_password"
+                                                class="form-control form-control-lg" required>
+                                        </div>
+                                        <label for="confirm_new_password" class="form-label">
+                                            <h6>Confirm New Password</h6>
+                                        </label>
+                                        <div class="container">
+                                            <input type="password" name="confirm_new_password"
+                                                class="form-control form-control-lg" required>
+                                        </div>
+                                    </div>
+                                    <div class="pt-1 mb-4 mt-5">
+                                        <button class="btn btn-secondary btn-lg btn-block" type="submit"
+                                            value="Change Password">Change Password</button>
+                                    </div>
+                                    <!-- Success Alert -->
+                                    <div class="alert alert-success" id="success" role="alert"
+                                        style="visibility: {{ visibility }}">
+                                        <p>{{ confirmation }}</p>
+                                    </div>
+                                    <a class="small text-muted" href="#!">Forgot password?</a>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}

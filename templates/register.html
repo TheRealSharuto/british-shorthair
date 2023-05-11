@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+<!-- Section: Design Block -->
+<section class="text-center text-lg-start">
+    <style>
+        .cascading-right {
+            margin-right: -50px;
+        }
+
+        @media (max-width: 991.98px) {
+            .cascading-right {
+                margin-right: 0;
+            }
+        }
+    </style>
+
+    <!-- Jumbotron -->
+    <div class="container py-4">
+        <div class="row g-0 align-items-center">
+            <div class="col-lg-6 mb-5 mb-lg-0">
+                <div class="card cascading-right" style="
+              background: hsla(0, 0%, 100%, 0.55);
+              backdrop-filter: blur(30px);
+              ">
+                    <div class="card-body p-5 shadow-5">
+                        <h2 class="fw-bold mb-5 text-center">Sign up now</h2>
+                        <form method="post">
+                            <!-- Error Alert -->
+                            <div class="alert alert-danger" id="password_errors" role="alert"
+                                style="display: {{ display }}">
+                                <p>Error: {{ error }}</p>
+                            </div>
+                            <!-- Username input -->
+                            <div class="form-outline mb-4">
+                                <label class="form-label" for="username">Username</label>
+                                <input type="username" id="username" name="username" class="form-control" required>
+
+                            </div>
+                            <!-- Email input -->
+                            <div class="form-outline mb-4">
+                                <label class="form-label" for="email">Email address</label>
+                                <input type="email" id="email" class="form-control" name="email" required>
+
+                            </div>
+
+                            <!-- Password input -->
+                            <div class="form-outline mb-4">
+                                <label class="form-label" for="password">Password</label>
+                                <input type="password" id="password" class="form-control" name="password" required>
+
+                            </div>
+
+                            <!-- Confirm password -->
+                            <div class="form-outline mb-4">
+                                <label class="form-label" for="confirm_password">Confirm Password</label>
+                                <input type="password" name="confirm_password" id="confirm_password"
+                                    class="form-control" />
+                            </div>
+
+                            <!-- Submit button -->
+                            <button type="submit" value="Register" class="btn btn-secondary btn-block mb-4">
+                                Register
+                            </button>
+                            <!-- Success Alert -->
+                            <div class="alert alert-success" id="confirmation" role="alert"
+                                style="visibility: {{ visibility }}">
+                                <p>{{ confirmation }}</p>
+                            </div>
+                            <p class="mb-5 pb-lg-2" style="color: #393f81;">Already have an account? <a
+                                    href="/login.html" style="color: #393f81;">Login here</a></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 mb-5 mb-lg-0">
+                <img src="static/library-shorthair.webp" class="w-100 rounded-4 shadow-4" alt="" />
+            </div>
+        </div>
+    </div>
+    <!-- Jumbotron -->
+</section>
+<!-- Section: Design Block -->
+{% endblock %}
