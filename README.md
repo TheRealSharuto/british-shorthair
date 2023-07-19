@@ -5,7 +5,8 @@ Cute little Python Flask generated site. This site is in progress. The responsiv
 - HTML
 - CSS
 - JSON
-In the Future I plan to add:
+
+# In the Future I plan to add:
 - JavaScript / jQuery
 - SQL
 - Change CSS to SCSS
